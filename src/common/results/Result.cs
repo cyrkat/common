@@ -4,9 +4,6 @@ namespace cyrkat.common.results
 {
 	public class Result<T>
 	{
-		public readonly T Value;
-		public readonly Error Error;
-
 		internal Result(T value)
 		{
 			Value = value;
@@ -16,6 +13,9 @@ namespace cyrkat.common.results
 		{
 			Error = error;
 		}
+
+		public readonly T Value;
+		public readonly Error Error;
 
 		public static Result<T> SucceedWith(T value)
 		{
